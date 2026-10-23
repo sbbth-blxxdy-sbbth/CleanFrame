@@ -13,3 +13,7 @@ On the maintainer's TV, preserve the stable package/application identity, author
 Keep proprietary fonts, signing keys, passwords, device identifiers, addresses, SDKs, recovery values and generated packages in ignored `.local/` or `dist/`. Never commit paid font binaries or publish a private-font widget. Public-code licensing does not replace the terms in `THIRD_PARTY_NOTICES.md`.
 
 On Nathan's Mac, use `/Users/nathan/.local/bin/gh-for-repo` for GitHub CLI work. On another machine, use the contributor's own authenticated GitHub account. Preserve shared or uncommitted work. Use reversible deletion; never reset, force-push or rewrite history without explicit authority. Publication/visibility changes require a separate instruction.
+
+## Cursor Cloud specific instructions
+
+The environment start script already serves the public-font preview at http://127.0.0.1:4795/home/. Click the stage, then use the arrow keys, Enter and Escape. Dependency setup is `npm ci` followed by `npx playwright install --with-deps chromium`. For interaction changes, run `npm run check` and `CLEANFRAME_PUBLIC_FONTS=1 npm run check:browser`. This environment has no TV, signing keys or Samsung SDK; do not connect to a device or change Home/startup settings.
